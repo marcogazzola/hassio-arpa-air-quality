@@ -1,5 +1,9 @@
 <a href="https://www.buymeacoffee.com/Gazzolinho" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
+### [Support my work with a donation](https://paypal.me/marcogazzola)
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/marcogazzola/hassio-arpa-air-quality?style=for-the-badge) ![GitHub Release Date](https://img.shields.io/github/release-date/marcogazzola/hassio-arpa-air-quality?style=for-the-badge) ![GitHub Releases](https://img.shields.io/github/downloads/marcogazzola/hassio-arpa-air-quality/latest/total?color=purple&label=%20release%20Downloads&style=for-the-badge) ![GitHub All Releases](https://img.shields.io/github/downloads/marcogazzola/hassio-arpa-air-quality/total?color=orange&label=Total%20downloads&style=for-the-badge)
+
 # Arpa Air Quality
 Get air information from Arpa (https://www.arpa.veneto.it/)
 # <span style="font-family: 'Segoe UI Emoji'">🌬</span> Arpa Veneto Air quality
@@ -7,6 +11,9 @@ Get air information from Arpa (https://www.arpa.veneto.it/)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
 
 Collect information about Air quality information provided by Arpa Veneto throught sensor
+
+## Installation
+Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/marcogazzola/hassio-arpa-air-quality) the `arpa_air_quality` directory from inside the `apps` directory here to your local `apps` directory.
 
 ## Configuration
 
