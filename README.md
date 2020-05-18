@@ -34,6 +34,19 @@ Just add these key to your secrets.yaml file:
 >   - pm10
 > ```
 
+Just add sensors to your configuration.yaml file. 
+```
+sensor:
+- platform: template
+  sensors:
+    arpa_url_json: 
+      value_template: !secret arpa_url_json
+    arpa_station_id: 
+      value_template: !secret arpa_station_id
+    arpa_refresh_rate: 
+      value_template: !secret arpa_refresh_rate
+```
+
 ## Sensor
 Automatically will be created sensor **sensor.arpa_air_station**
 
