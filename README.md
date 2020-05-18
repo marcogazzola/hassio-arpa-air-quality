@@ -6,11 +6,6 @@ Get air information from Arpa (https://www.arpa.veneto.it/)
 
 Collect information about Air quality information provided by Arpa Veneto throught sensor
 
-## Sensor
-Automatically will be created sensor **sensor.arpa_air_station**
-
-<img src="example-sensor.png" width="400px">
-
 ## Configuration
 
 Just add these key to your secrets.yaml file:
@@ -24,8 +19,7 @@ Just add these key to your secrets.yaml file:
 | [`arpa_url_json`](#)            | Url of Json data                         | `string` | http://213.217.132.81/aria-json/exported/aria/data.json      |
 | [`arpa_station_id`](#)          | Station ID to fetch data.                | `integer`| 500021975         |
 | [`arpa_refresh_rate`](#)        | Refresh rate in hour. Default 6 hours    | `integer`| 6                 |
-| [`arpa_monitored_params`](#)    | List of params to monitor                | `list`   | - ozono</br>- pm10 
-|
+| [`arpa_monitored_params`](#)    | List of params to monitor                | `list`   | - ozono</br>- pm10|
 
 
 > ```yaml
@@ -37,3 +31,31 @@ Just add these key to your secrets.yaml file:
 >   - ozono
 >   - pm10
 > ```
+
+## Sensor
+Automatically will be created sensor **sensor.arpa_air_station**
+
+<img src="example-sensor.png" width="400px">
+
+## Event
+With a custom event **arpa_air_quality** it's possible to refresh data immediately.
+Event can accept optional parameters:
+
+| Parameter                       | Description                              | Type     | Example                                     |
+| ------------------------------- | ---------------------------------------- | ------   | ------------------------------------------- |
+| [`arpa_url_json`](#)            | Url of Json data                         | `string` | http://213.217.132.81/aria-json/exported/aria/data.json      |
+| [`arpa_station_id`](#)          | Station ID to fetch data.                | `integer`| 500021975         |
+| [`arpa_monitored_params`](#)    | List of params to monitor                | `list`   | - ozono</br>- pm10|
+
+
+> ```yaml
+> # Example refresh Arpa air quality at sunset and monitor only pm10
+> - alias: Refresh Arpa air quality at sunset and monitor only pm10
+>   trigger:
+>     - platform: sun
+>       event: sunset
+>   action:
+>     - event: arpa_air_quality
+>       event_data:
+>         arpa_monitored_params: 
+>           - pm10
