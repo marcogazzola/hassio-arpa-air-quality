@@ -10,6 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Push changes
+    uses: ad-m/github-push-action@master
+    with:
+      github_token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v2
     - name: Create Release Folder
       run: rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
