@@ -1,0 +1,10 @@
+{
+  "name": "Arpa Air monitor",
+  "content_in_root": true,
+  "zip_release": true,
+  "filename": "arpa_air_quality.zip",
+  "country": ["IT"],
+  "domains": [
+    "sensor"
+  ],
+}
