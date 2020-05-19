@@ -40,7 +40,7 @@ class arpa_air_quality(hass.Hass):
 		self.log("########### ARPA AIR MONITOR END INIT ###########")
 
 	def throttle_retrive_data(self, kwargs):
-		self.log("throttle_retrive_data {}".format(kwargs))
+		self.log("throttle_retrive_data {}".format(kwargs), level = 'INFO')
 		self.retrive_data(self.arpa_url, self.arpa_station_id, self.arpa_monitored_params)
 
 	def retrive_data(self, url, station_id, arpa_monitored_params):
