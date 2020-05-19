@@ -67,7 +67,7 @@ class arpa_air_quality(hass.Hass):
 				for monitor_name in arpa_monitored_params:
 					if monitor_name in (json.dumps(arpa_station["misurazioni"])):
 						for monitor_obj in arpa_station["misurazioni"]:
-							self.log("monitor_name {}".format(monitor_name))
+							self.log("monitor_name {}".format(monitor_name), level = 'INFO')
 							self.log("old monitor_obj {}".format(monitor_obj))
 							monitor_obj = monitor_obj.get(str(monitor_name))
 							self.log("new monitor_obj {}".format(monitor_obj))
