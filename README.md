@@ -2,7 +2,10 @@
 
 ### [Support my work with a donation](https://paypal.me/marcogazzola)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/marcogazzola/hassio-arpa-air-quality?style=for-the-badge) ![GitHub Release Date](https://img.shields.io/github/release-date/marcogazzola/hassio-arpa-air-quality?style=for-the-badge) ![GitHub Releases](https://img.shields.io/github/downloads/marcogazzola/hassio-arpa-air-quality/latest/total?color=purple&label=%20release%20Downloads&style=for-the-badge) ![GitHub All Releases](https://img.shields.io/github/downloads/marcogazzola/hassio-arpa-air-quality/total?color=orange&label=Total%20downloads&style=for-the-badge) ![MasterDeployCI](https://github.com/marcogazzola/hassio-arpa-air-quality/workflows/MasterDeployCI/badge.svg) ![Validate with HACS](https://github.com/marcogazzola/hassio-arpa-air-quality/workflows/Validate%20with%20HACS/badge.svg)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/marcogazzola/hassio-arpa-air-quality?style=for-the-badge) ![GitHub Release Date](https://img.shields.io/github/release-date/marcogazzola/hassio-arpa-air-quality?style=for-the-badge) ![GitHub Releases](https://img.shields.io/github/downloads/marcogazzola/hassio-arpa-air-quality/latest/total?color=purple&label=%20release%20Downloads&style=for-the-badge) ![GitHub All Releases](https://img.shields.io/github/downloads/marcogazzola/hassio-arpa-air-quality/total?color=orange&label=Total%20downloads&style=for-the-badge) 
+
+
+![MasterDeployCI](https://github.com/marcogazzola/hassio-arpa-air-quality/workflows/MasterDeployCI/badge.svg) ![Validate with HACS](https://github.com/marcogazzola/hassio-arpa-air-quality/workflows/Validate%20with%20HACS/badge.svg)
 
 # Arpa Air Quality
 Get air information from Arpa (https://www.arpa.veneto.it/)
