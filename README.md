@@ -84,3 +84,4 @@ Event can accept optional parameters:
 >       event_data:
 >         arpa_monitored_params: 
 >           - pm10
+> ```
