@@ -24,12 +24,9 @@ jobs:
           cd release
           ls -la
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.17.2
+        uses: anothrNick/github-tag-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_OWNER: marcogazzola
           WITH_V: true
-      - name: Generate release notes
-        uses: raulanatol/github-actions-releaser@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
