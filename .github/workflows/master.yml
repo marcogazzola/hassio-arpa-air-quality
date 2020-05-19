@@ -22,3 +22,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: marcogazzola
         WITH_V: true
+    - uses: snyk/release-notes-preview@v1.6.1
+      with:
+        releaseBranch: master
+      env:
+        GITHUB_PR_USERNAME: ${{ github.actor }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
