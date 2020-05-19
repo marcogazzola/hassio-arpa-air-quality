@@ -15,7 +15,7 @@ jobs:
         cd release
         ls -la
     - name: Bump version and push tag
-      uses: marcogazzola/hassio-arpa-air-quality@master
+      uses: anothrNick/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         REPO_OWNER: marcogazzola
