@@ -3,6 +3,9 @@ on:
   push:
     branches-ignore:
       - master
+
+      #zip -r -j prova file1 dir2/ && cd dir3 &&  zip -r ../prova.zip dir4/ && cd ..
+
 jobs:
   build:
     name: Upload Release Asset
@@ -13,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build project
         run: |
-          zip -r arpa_air_quality VERSION README.md apps/arpa_air_quality/*.*
+          zip -r -j arpa_air_quality VERSION README.md apps/arpa_air_quality/
       - name: Get version
         run: echo ::set-env name=version::$(cat VERSION)
       - name: Create release
