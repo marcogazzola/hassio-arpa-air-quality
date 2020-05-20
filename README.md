@@ -15,6 +15,10 @@ Get air information from Arpa (https://www.arpa.veneto.it/)
 
 Collect information about Air quality information provided by Arpa Veneto throught sensor
 
+## Prerequisites
+***Arpa Air Quality** is an [AppDaemon](https://github.com/home-assistant/appdaemon) app.*
+The app works with Appdaemon v4.x.
+
 ## Installation
 Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/marcogazzola/hassio-arpa-air-quality) the `arpa_air_quality` directory from inside the `apps` directory here to your local `apps` directory.
 
