@@ -1,0 +1,41 @@
+name: manual_deploy
+on:
+  push:
+    branches-ignore:
+      - master
+
+      #zip -r -j prova file1 dir2/ && cd dir3 &&  zip -r ../prova.zip dir4/ && cd ..
+
+jobs:
+  build:
+    name: Upload Release Asset
+    runs-on: ubuntu-latest 
+    if: "contains(github.event.head_commit.message, 'beta-deploy')"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build project
+        run: |
+          zip -r -j arpa_air_quality VERSION README.md apps/arpa_air_quality/
+      - name: Get version
+        run: echo ::set-env name=version::$(cat VERSION)
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.version }}
+          release_name: v${{ env.version }}
+          draft: true
+          prerelease: true
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./arpa_air_quality.zip
+          asset_name: arpa_air_quality.zip
+          asset_content_type: application/zip
