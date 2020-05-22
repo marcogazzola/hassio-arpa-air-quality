@@ -13,8 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project
+          # zip --junk-paths arpa_air_quality README.md apps/*
         run: |
-          zip --junk-paths arpa_air_quality README.md apps/*
+          zip -j arpa_air_quality VERSION README.md apps/hassio-arpa-air-quality/*.* && cd apps/hassio-arpa-air-quality && zip -r -u ../../arpa_air_quality.zip regions/
       - name: Get version
         run: echo ::set-env name=version::$(cat VERSION)
       - name: Create release
