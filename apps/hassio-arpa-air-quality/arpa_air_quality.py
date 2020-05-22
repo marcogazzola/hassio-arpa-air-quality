@@ -21,7 +21,7 @@ class arpa_air_quality(hass.Hass):
 				self.log("self.config {}".format(self.config), level = 'DEBUG')
 				self.regionsConfig = self.config["regions"]
 				self.log("self.regionsConfig {}".format(self.regionsConfig), level = 'DEBUG')
-				self.timer_interval = int(self.config["refresh_rate"]) * 60 * 60
+				self.timer_interval = int(self.config["refresh_rate"]) * 60
 				self.log("self.timer_interval {}".format(self.timer_interval), level = 'DEBUG')
 		except Exception as inst:
 			self.regionsConfig = None
@@ -47,7 +47,7 @@ class arpa_air_quality(hass.Hass):
 	def arpa_air_quality_refresh(self, event_name, data, kwargs):
 		self.log("Event: {}".format(event_name), level = 'DEBUG')
 		self.log("Event data: {}".format(data), level = 'DEBUG')
-		if "regioni" in data:
+		if "regions" in data:
 			event_refresh_regions = dict((k, self.regionsConfig[k]) for k in data["regioni"] if k in self.regionsConfig)
 			self.log("regions to refresh: {}".format(event_refresh_regions), level = 'INFO')
 			if event_refresh_regions:

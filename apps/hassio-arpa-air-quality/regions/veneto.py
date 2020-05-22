@@ -84,6 +84,8 @@ class veneto(arpa_base_class):
 										if attribute_value is not None: attributes_monitor[monitor_name] = "{} {}".format(attribute_value, unit_obj)
 								if self.createSensor:
 									attribute_sensor={}
+									if attribute_unit is not None:
+										attribute_sensor["unit_of_measurement"] = attribute_unit
 									attribute_sensor["data_rilevazione"] = attribute_date
 									attribute_sensor["last_updated"] = datetime.now()
 									attribute_sensor["station_id"] = station_id
