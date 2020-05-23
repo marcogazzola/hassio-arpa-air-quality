@@ -48,7 +48,7 @@ class arpa_air_quality(hass.Hass):
 		self.log("Event: {}".format(event_name), level = 'DEBUG')
 		self.log("Event data: {}".format(data), level = 'DEBUG')
 		if "regions" in data:
-			event_refresh_regions = dict((k, self.regionsConfig[k]) for k in data["regioni"] if k in self.regionsConfig)
+			event_refresh_regions = dict((k, self.regionsConfig[k]) for k in data["regions"] if k in self.regionsConfig)
 			self.log("regions to refresh: {}".format(event_refresh_regions), level = 'INFO')
 			if event_refresh_regions:
 				#throttle function to ensure that we don't call check multiple times
