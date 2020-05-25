@@ -36,6 +36,10 @@ Informations data are provided from Arpa local departments through [Open Data](h
 ## Installation
 Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/marcogazzola/hassio-arpa-air-quality/releases/latest) the `hassio-arpa-air-quality` directory inside the `apps` directory here to your local `apps` directory.
 
+## Prerequisites
+***Arpa Air Quality** is an [AppDaemon](https://github.com/home-assistant/appdaemon) app.*
+The app works with Appdaemon v4.x.
+
 ## Installation
 Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/marcogazzola/hassio-arpa-air-quality/releases/latest) the `hassio-arpa-air-quality` directory inside the `apps` directory here to your local `apps` directory.
 
