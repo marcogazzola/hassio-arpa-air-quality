@@ -1,0 +1,24 @@
+{
+  "refresh_rate": 6,
+  "create_sensor": true,
+  "unit_of_measurement": {
+    "ozono": "µg/m3",
+    "pm10": "µg/m3",
+    "SO2": "µg/m3"
+  },
+  "regions": {
+    "veneto": {
+      "url": "http://213.217.132.81/aria-json/exported/aria/data.json",
+      "station_id": "500021975",
+      "monitored_params": [
+        "pm10",
+        "OZONO"
+      ]
+    },
+    "toscana": {
+      "url": "http://www.arpat.toscana.it/temi-ambientali/aria/qualita-aria/dati_orari_real_time/json_orari_nrt/",
+      "monitored_params": ["SO2", "NO2", "O3", "CO", "H2S", "BENZENE"],
+      "station_id": "FI-GRAMSCI"
+    }
+  }
+}

@@ -1,19 +1,20 @@
-name: MasterDeployCI
+name: manual_deploy
 on:
   push:
-    branches:
+    branches-ignore:
       - master
 
+      # zip -r -j prova file1 dir2/ && cd dir3 &&  zip -r ../prova.zip dir4/ && cd ..
+      # zip -r -j arpa_air_quality VERSION README.md apps/hassio-arpa-air-quality/ && cd apps/hassio-arpa-air-quality && zip -r -u ../arpa_air_quality.zip regions/
 jobs:
   build:
     name: Upload Release Asset
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci-skip')"
+    runs-on: ubuntu-latest 
+    if: "contains(github.event.head_commit.message, 'beta-deploy')"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build project
-          # zip --junk-paths arpa_air_quality README.md apps/*
         run: |
           zip -j arpa_air_quality VERSION README.md apps/hassio-arpa-air-quality/*.* && cd apps/hassio-arpa-air-quality && zip -r -u ../../arpa_air_quality.zip regions/
       - name: Get version
@@ -26,8 +27,8 @@ jobs:
         with:
           tag_name: v${{ env.version }}
           release_name: v${{ env.version }}
-          draft: false
-          prerelease: false
+          draft: true
+          prerelease: true
       - name: Upload Release Asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1

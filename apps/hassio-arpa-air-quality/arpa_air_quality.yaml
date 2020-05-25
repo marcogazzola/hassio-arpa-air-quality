@@ -1,0 +1,13 @@
+Arpa_air_quality:
+  module: arpa_air_quality
+  class: arpa_air_quality
+
+  app_name: Arpa Air Quality
+  app_folder_name: hassio-arpa-air-quality
+
+  global_dependencies:
+    - secrets
+
+  dependencies:  
+    - veneto
+    - toscana
